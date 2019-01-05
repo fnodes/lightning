@@ -1,5 +1,5 @@
 #!/bin/bash
-docker pull fullnodes/lighting:latest
+docker pull fullnodes/lightning:latest
 docker stop lightningd
 docker rm lightningd
 docker volume create lightning
