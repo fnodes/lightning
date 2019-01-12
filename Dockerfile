@@ -53,7 +53,7 @@ RUN mkdir /opt/litecoin && cd /opt/litecoin \
     && tar -xzvf litecoin.tar.gz $BD/litecoin-cli --strip-components=1 --exclude=*-qt \
     && rm litecoin.tar.gz
 
-ENV LIGHTNINGD_VERSION=v0.6.2
+ENV LIGHTNINGD_VERSION=v0.6.3
 
 WORKDIR /opt/lightningd
 RUN git clone https://github.com/ElementsProject/lightning.git -b v0.6.2 .
