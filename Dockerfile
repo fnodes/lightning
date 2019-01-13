@@ -56,7 +56,7 @@ RUN mkdir /opt/litecoin && cd /opt/litecoin \
 ENV LIGHTNINGD_VERSION=v0.6.3
 
 WORKDIR /opt/lightningd
-RUN git clone https://github.com/ElementsProject/lightning.git -b v0.6.2 .
+RUN git clone https://github.com/ElementsProject/lightning.git -b $LIGHTNINGD_VERSION .
 
 ARG DEVELOPER=0
 RUN ./configure && make -j3 DEVELOPER=${DEVELOPER} && cp lightningd/lightning* cli/lightning-cli /usr/bin/
